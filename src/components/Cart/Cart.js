@@ -1,22 +1,29 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import './Cart.css';
 
-const Cart = () => {
+const Cart = (props) => {
+    
+    // Destructure props data
+    const {addToCart} = props;
+
+    // Calculate total cost
+    let totalCost = 0;
+    for(const programmer of addToCart){
+        totalCost += programmer.cost;
+    }
+    
     return (
-        <div>
-            <FontAwesomeIcon className="cart-icon" icon={faShoppingCart} />
-            <div className="cart">
-                <FontAwesomeIcon className="close-icon" icon={faWindowClose} />
-                <h3>Programmer added: 4</h3>
-                <h3>Total Cost: $6666</h3>
-                <hr />
-                <h4>Added Programmers:-</h4>
-                <ul>
-                    <li>Nia Das</li>
-                </ul>
-            </div>
+        // Cart
+        <div className='cart'>
+            <h3>Programmers added: {addToCart.length}</h3>
+            <h3>Cost: ${totalCost}</h3>
+            <hr />
+            <h4>Added programmers name:- </h4>
+            <ul>
+                {
+                    addToCart.map((item)=> <li key={item.id}>{item.name}</li>)
+                }
+            </ul>
         </div>
     );
 };

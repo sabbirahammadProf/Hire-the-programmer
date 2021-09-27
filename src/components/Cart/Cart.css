@@ -1,15 +1,5 @@
 .cart {
-    position: fixed;
-    width: 100%;
-    margin-left: -300px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    padding: 0 20px;
-}
-
-.close-icon {
-    font-size: 22px;
-    margin-top: 12px;
-    cursor: pointer;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
 }

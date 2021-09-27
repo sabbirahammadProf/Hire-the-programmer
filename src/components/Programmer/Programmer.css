@@ -39,3 +39,17 @@
 .add-btn:hover {
     background-color: #9143da;
 }
+
+.icon {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.phone-icon {
+    background-color: black;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 12px;
+}
